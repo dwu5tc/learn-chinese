@@ -1,5 +1,37 @@
+/*
+- input area
+- sanitize the data (delete english chars, emojis, etc)
+- hit yabla endpoint and then parse the html for words, pinyin, and definitions
+- redisplay to the front end choose which ones to add
+- add to database
+- user authentication
+- profile page, translate page, your words page, friends page
+- can translate without authentication, but can't save
+- can share your list with friends
+- filter words by usage/count, date added, flag
+- flag words by how well you know them? and by complexity?
+- can delete words
+- can update words (custom definition)
+- can add example sentences
+- feed into memorization game??
+- add voice notes?
+- voice processing?? speak --> text --> yabla
+
+- react, postgres or mongo...?, express
+*/
+
 const request = require('request'),
 	cheerio = require('cheerio');
+
+const sanitize = str => {
+	// sanitize english letters, emojis, etc
+}
+
+// auth things
+
+// database things
+
+// paths
 
 const yablaRequest = str => {
 	url = 'https://chinese.yabla.com/chinese-english-pinyin-dictionary.php?define=' + encodeURIComponent(str);
